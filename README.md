@@ -1,1 +1,1 @@
-# Skin-Segmentation-Machine-Learning-Statistical-Analysis
+# Skin Segmentation Machine Learning Statistical Analysis
