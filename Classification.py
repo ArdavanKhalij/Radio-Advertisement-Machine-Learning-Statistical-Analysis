@@ -3,7 +3,8 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 from imblearn.under_sampling import RandomUnderSampler
 import pandas as pd
-import matplotlib
+import numpy as np
+import matplotlib.pyplot as plt
 
 # Convert txt to csv
 # column_names = ['B', 'G', 'R', 'Class']
@@ -36,3 +37,13 @@ nb.fit(X_train_under, Y_train_under)
 dt = DecisionTreeClassifier(criterion='entropy', random_state=0)
 dt.fit(X_train_under, Y_train_under)
 # y_prediction = dt.predict(X_test)
+
+# Figure for the points in the dataset
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+B_data = X_train_under['B']
+G_data = X_train_under['G']
+R_data = X_train_under['R']
+Class_data = Y_train_under['Class']
+ax.scatter3D(B_data, G_data, R_data, c=Class_data, marker=".")
+plt.show()
