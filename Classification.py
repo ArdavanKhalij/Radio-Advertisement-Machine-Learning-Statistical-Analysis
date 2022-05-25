@@ -23,9 +23,9 @@ Y = Data[outcome]
 # Naive Bayes classification
 nb = GaussianNB()
 nb.fit(X, Y)
-# y_pred = nb.predict(X_test)
+# y_prediction = nb.predict(X_test)
 
 # Naive Bayes classification
 dt = DecisionTreeClassifier(criterion='entropy', random_state=0)
 dt.fit(X, Y)
-# y_pred = dt.predict(X_test)
+# y_prediction = dt.predict(X_test)
