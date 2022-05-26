@@ -1,1 +1,3 @@
-# Code for generating synthetic dataset
+# Libraries
+import numpy as np
+import matplotlib. pylab as plt
